@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block cardheader %}
+Work Points remaining: {{ points }}
+{% endblock %}
+
+{% block cardtitle %} 
+Reminder: 1 "Work Point" = 1 correctly solved task
+{% endblock %}
+
+{% block content %}
+
+<p><b>Your current income is {{ income }}€</b></p>
+<p>Currently: <b>{{paid}} hours / {{unpaid}} hours</b> (paid / unpaid) work per week</p>
+
+<form action='/check/{{task.id}}' method='POST'>
+  <div class="row g-3">
+    <div class='col-sm-1'>
+      <label for="task{{task.id}}" class="col-sm-0 col-form-label">{{ task.content }}</label>
+    </div>
+    <div class="col-sm-3">
+      <input class="form-control" type="text" placeholder="Answer" aria-label="default input example" name="answerGiven">
+    </div>
+    <div class="col-sm-1">
+            <input type="submit" class="btn btn-primary" value ="Submit">
+          </div>
+  </div>
+    </form>
+
+
+{% endblock %}
+
+{% block button %}
+<br>
+
+<form action='/switch' method='POST'>
+<button class="btn btn-danger" type="submit" name="Switch" value="FromMaths">I want to switch to "unpaid" work' >>> </button>
+</form>
+
+{% endblock %}
+
+{% block progresscounter %} 
+Progress: 3/5
+{% endblock %}

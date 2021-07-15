@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block cardheader %}
+Work Points remaining: {{ points }}
+{% endblock %}
+
+{% block cardtitle %} 
+Reminder: 1 pic = 1 "Work Point"
+{% endblock %}
+
+{% block content %}
+
+<p><b>Your current income is: {{ income }}€</b></p>
+<p>Currently: <b>{{paid}} hours / {{unpaid}} hours</b> (paid / unpaid) work per week</p>
+
+<div class="container">
+    <img src="{{link}}" class="img-fluid">
+    
+    </div>
+    <br>
+<form action='/comics' method='POST'>
+    <div class="col-auto">
+            <input type="submit" class="btn btn-primary" value ="Next">
+          </div>
+    </form>
+
+    {% endblock %}
+
+{% block button %}
+<br>
+
+<form action='/switch' method='POST'>
+    <button class="btn btn-danger" type="submit" name="Switch" value="FromComics">I want to switch to "paid" work' >>> </button>
+    </form>
+
+<!-- <a href="/maths" class="btn btn-danger">I want to switch to "paid" work >>> </a> -->
+{% endblock %}
+
+{% block progresscounter %} 
+Progress: 3/5
+{% endblock %}

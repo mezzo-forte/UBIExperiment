@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block cardheader %}
+Admin Panel: experimentor's best friend
+{% endblock %}
+
+{% block cardtitle %} 
+Live overview of experimental results
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container-fluid">
+    <div class="card">
+        <h6 class="card-header" style="background-color: #CFE2FF;">Subjects statistics</h6>
+
+        <div class="card-body">
+          <p class="card-text">
+            <div class="container-lg">
+                <div class ='row'>
+                    <div class ='col-lg-3'>
+                        <ul class="list-group">
+                            <li class="list-group-item">Started experiment: {{subjects}}</li>
+                            <li class="list-group-item">Finished experiment: {{finished}}</li>
+                       
+                          </ul>
+                        </div>
+                        <div class ='col-lg-3'>
+                            <ul class="list-group">
+                                <li class="list-group-item">UBI: {{model[0]}}</li>
+                                <li class="list-group-item">UBI+WS: {{model[1]}}</li>
+                                <li class="list-group-item">MIG+WS: {{model[2]}}</li>
+                              </ul>
+                            </div>
+            </div>
+          </p>
+          
+            
+          
+        </div>
+    </div>
+</div>
+<br>
+<div class="container-fluid">
+    <div class="card">
+        <h6 class="card-header" style="background-color: #CFE2FF;">Descriptive statistics of finished experiments</h6>
+
+        <div class="card-body">
+          <p class="card-text">
+            <div class="container-lg">
+                <div class ='row'>
+                    <div class ='col-sm-2'>
+                        <ul class="list-group">
+                            <li class="list-group-item" style="background-color: #F7F7F7;"><b>Model</b></li>
+                            <li class="list-group-item">UBI </li>
+                            <li class="list-group-item">UBI + WS</li>
+                            <li class="list-group-item">MIG + WS </li>
+                          </ul>
+                        </div>
+                        <div class ='col-md-3'>
+                            <ul class="list-group">
+                            <li class="list-group-item" style="background-color: #F7F7F7;"><b>Average Paid Hours</b></li>
+                            <li class="list-group-item">{{averagePaid[0]}}</li>
+                            <li class="list-group-item">{{averagePaid[1]}}</li>
+                            <li class="list-group-item">{{averagePaid[2]}}</li>
+                      
+                              </ul>
+                            </div>
+                        <div class ='col-md-3'>
+                            <ul class="list-group">
+                            <li class="list-group-item" style="background-color: #F7F7F7;"><b>Average Income</b></li>
+                            <li class="list-group-item">{{averageIncome[0]}}</li>
+                            <li class="list-group-item">{{averageIncome[1]}}</li>
+                            <li class="list-group-item">{{averageIncome[2]}}</li>
+                      
+                              </ul>
+                            </div>
+            </div>
+          </p>
+          
+            
+          
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block progresscounter %} 
+Admin panel 
+{% endblock %}

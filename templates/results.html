@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block cardheader %}
+Results
+{% endblock %}
+
+{% block cardtitle %}
+According to the social model in this society your payoff would make <b>{{income}}€</b> per month
+{% endblock %}
+
+{% block content %} 
+
+<p>You have decided for:</p>
+
+<p><b>{{paid}} hours</b> of paid work per week</p>
+
+<p><b>{{unpaid}} hours</b> of unpaid work per week</p>
+
+
+
+
+{% endblock %}
+        
+{% block button %}
+<a href='/questionnaire' class='btn btn-primary'>OK</a>
+
+{% endblock %}
+
+
+{% block progresscounter %} 
+Progress: 4/5
+{% endblock %}

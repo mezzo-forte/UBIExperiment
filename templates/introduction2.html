@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block cardheader %}
+Rules explanation
+{% endblock %}
+
+{% block content %}
+
+<p>You are a member of the society where everyone is engaged in 2 types of work. One work type generates income, another one - doesn't.</p>
+
+<p>All members of this society receive a fixed payment of <b>600€</b> each month from the state <b>without any exceptions</b>. If you take income-generating work, you get also your salary, according to hours worked <b>(h)</b> and wage of <b>{{ wage }}€ per hour</b>. In addition, the state provides a <b>subsidy of 10%</b> to the hourly wage</b></p>
+
+<p>You have <b>40 hours</b> of possible working time (per week). You can decide how to distribute this time between available work types.</p>
+
+<p>Total income <b>below 600€</b> is not taxed, while excessive income is taxed at a <b>flat rate of 25%</b>. Thus, your overall income can be described by the following formula:</p>
+
+<div class="container">
+    <img src="static/assets/images/Model2.png" class="img-fluid">
+    </div>
+
+<!-- <p>
+    <div class = "container-md">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+		
+        <mrow>
+           <mi>π</mi>
+           <mo>=</mo>
+           
+           <mfenced open="{" close="">
+           
+              <mtable>
+                 <mtr columnalign="left">
+                    <mtd>
+                        <mn>600</mn>
+                        <mo>+</mo>
+                        <mn>4</mn>
+                        <mo>*</mo>
+                        <mi>h</mi>
+                        <mo>*</mo>
+                        <mtext>{{ wage }}</mtext>
+                        <mo>*</mo>
+                        <mfenced separators = "">
+                            <mn>1</mn>
+                            <mo>+</mo>
+                            <mi>0,1</mi>
+                            </mfenced>
+
+                        <mspace width="15ex"></mspace>
+                        <mtext>if</mtext>
+                        <mspace width ="2ex"></mspace>
+                        <mn>4</mn>
+                        <mo>*</mo>
+                        <mi>h</mi>
+                        <mo>*</mo>
+                        <mtext>{{ wage }}</mtext>
+                        <mo>*</mo>
+                        <mfenced separators = "">
+                            <mn>1</mn>
+                            <mo>+</mo>
+                            <mi>0,1</mi>
+                            </mfenced>
+                        
+                        <mo><</mo>
+                        <mn>600</mn>
+                    </mtd>
+                    
+                 </mtr>
+                   
+                 <mtr columnalign="left">
+                    <mtd>
+                        <mn>600</mn>
+                        <mo>+</mo>
+                        <mn>4</mn>
+                        <mo>*</mo>
+                        <mi>h</mi>
+                        <mo>*</mo>
+                        <mtext>{{ wage }}</mtext>
+                        <mo>*</mo>
+                        <mfenced separators = "">
+                            <mn>1</mn>
+                            <mo>+</mo>
+                            <mi>0,1</mi>
+                            <mo>-</mo>
+                            <mn>0,25</mn>
+                            </mfenced>
+
+                        <mspace width="8ex"></mspace>
+                        <mtext>if</mtext>
+                        <mspace width ="2ex"></mspace>
+                        <mn>4</mn>
+                        <mo>*</mo>
+                        <mi>h</mi>
+                        <mo>*</mo>
+                        <mtext>{{ wage }}</mtext>
+                        <mo>*</mo>
+                        <mfenced separators = "">
+                            <mn>1</mn>
+                            <mo>+</mo>
+                            <mi>0,1</mi>
+                            </mfenced>
+                        
+                        <mo>≥</mo>
+                        <mn>600</mn>
+                    </mtd>
+                    
+                 </mtr>
+              </mtable>
+              
+           </mfenced>
+        </mrow>
+     </math>
+    </div>
+</p> -->
+
+{% endblock %}
+
+{% block button %}
+<a href="/production_intro" class="btn btn-primary">Got it!</a>
+{% endblock %}
+
+{% block progresscounter %} 
+Progress: 1/5
+{% endblock %}
+

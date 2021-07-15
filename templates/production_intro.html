@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block cardheader %}
+Choice of work
+{% endblock %}
+
+{% block cardtitle %}
+At this stage you are to choose type of work that you would like to do.
+{% endblock %}
+
+{% block content %}
+<p>As <b>income-generating work</b> you can solve simple mathematical tasks, like these:</p>
+
+<div class="container">
+    <img src="static/assets/images/example.png" class="img-fluid">
+    </div>
+
+<!-- <math xmlns="http://www.w3.org/1998/Math/MathML">
+    <mtable>
+    <mtr>
+        <mn>12</mn>
+        <mo>*</mo>
+        <mn>21</mn>
+        <mo>=</mo>
+        <mtext>?</mtext>
+    </mtr>
+    <mtr>
+        <mn>14</mn>
+        <mo>*</mo>
+        <mn>24</mn>
+        <mo>=</mo>
+        <mtext>?</mtext>
+    </mtr>
+    </mtable>
+</math> -->
+<p></p>
+
+<p>As <b>unpaid work</b> you can read comics and memes, like this:</p>
+
+<div class="container">
+<img src="https://i.pinimg.com/originals/d4/aa/bd/d4aabd798ec8c5d7d9a54022265a3150.jpg" class="img-fluid">
+
+</div>
+
+<p>You have <b>40 points</b> which represent 40 hours available for work. For each maths task solved correctly or for each comic strip you spend 1 point. You get to the next stage when all "work points" are spent</p>
+<p>Switching to another work type is possible. Good luck!</p>
+{% endblock %}
+
+
+{% block button %}
+<a href="/maths" class="btn btn-danger">Maths</a>
+<a href="/comics" class="btn btn-danger">Comics</a>
+{% endblock %}
+
+
+{% block progresscounter %} 
+Progress: 2/5
+{% endblock %}

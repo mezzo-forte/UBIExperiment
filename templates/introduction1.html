@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block cardheader %}
+Rules explanation 
+{% endblock %}
+
+{% block content %}
+
+<p>You are a member of the society where everyone is engaged in 2 types of work. One work type generates income, another one - doesn't.</p>
+
+<p>All members of this society receive a fixed payment of <b>1200€</b> each month from the state without any exceptions. If you take income-generating work, you get income in addition to 1200€, according to hours worked <b>(h)</b> and constant wage of <b>{{ wage }}€ per hour</b></p>
+
+<p>You have <b>40 hours</b> of possible working time (per week). You can decide how to distribute this time between available work types.</p>
+
+<p>Income <b>below 1200€</b> is not taxed, while excessive income is taxed at a <b>flat rate of 25%</b>. Thus, your overall income can be described by the following formula:</p>
+<div class="container">
+<img src="static/assets/images/Model1.png" class="img-fluid">
+</div>
+<!-- <p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+		
+        <mrow>
+           <mi>π</mi>
+           <mo>=</mo>
+           <mn>1200</mn>
+           <mo>+</mo>
+           <mn>4</mn>
+           <mo>*</mo>
+           <mi>h</mi>
+           <mo>*</mo>
+           <mtext>{{ wage }}</mtext>
+           <mo>*</mo>
+           <mfenced separators = "">
+            <mn>1</mn>
+            <mo>-</mo>
+            <mi>0,25</mi>
+            </mfenced>
+            <mspace width="5ex"></mspace>
+            <mtext>where</mtext>
+            <mspace width="1ex"></mspace>
+                        <mi>h</mi>
+                        <mo>=</mo>
+                        <mtext>hours</mtext>
+                        <mspace width ="1ex"></mspace>
+                        <mtext>for</mtext>
+                        <mspace width ="1ex"></mspace>
+                        <mtext>income</mtext>
+                        <mtext>-</mtext>
+                        <mtext>generating</mtext>
+                        <mspace width ="1ex"></mspace>
+                        <mtext>work</mtext>
+                    
+        </mrow>
+     </math>
+</p> -->
+
+{% endblock %}
+
+{% block button %}
+<a href="/production_intro" class="btn btn-primary">Got it!</a>
+{% endblock %}
+
+{% block progresscounter %} 
+Progress: 1/5
+{% endblock %}
